@@ -1,6 +1,6 @@
 {
   "name": "codegurex-path",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Learn how systems work. Then learn how to secure them.",
   "type": "module",
   "bin": {

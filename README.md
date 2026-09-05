@@ -10,13 +10,14 @@ checks, module quizzes, safe exercises and local progress. No account, remote ba
 telemetry, browser UI or automatic execution of practice commands.
 
 ```text
-    /########   ####  ####  ###  ####  ####  #  #  ###  ####  #  #
-  /##            #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
- ##              #  #  #  #  #  ###   # ##  #  #  ###  ###    ##
- ##              #  #  #  #  #  #  #  #  #  #  # #  #  #  #
- ##              ####  ####  ###  ####  ####  ####  #  #  ####  #  #
-  \##
-    \########   P A T H  /  SECURITY LEARNING EXPERIENCE
+                           [ C ]  CODEGUREX SECURITY
+
+   ____ ___  ____  _____ ____ _   _ ____  _______  __
+  / ___/ _ \|  _ \| ____/ ___| | | |  _ \| ____\ \/ /
+ | |  | | | | | | |  _|| |  _| | | | |_) |  _|  \  /
+ | |__| |_| | |_| | |__| |_| | |_| |  _ <| |___ /  \
+  \____\___/|____/|_____\____|\___/|_| \_\_____/_/\_\
+             P A T H  /  SECURITY LEARNING EXPERIENCE
 
 +------------------------------------------------------------------------------+
 | CODEGUREX SECURITY                                                           |

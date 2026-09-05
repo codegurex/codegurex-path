@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { capabilities, wrap } from '../src/ui/terminal.js';
-import { brandBanner, combineColumns, largeWord } from '../src/ui/banner.js';
+import { brandBanner, centerLines } from '../src/ui/banner.js';
 
 describe('terminal fallbacks', () => {
   it('uses plain output for pipes and dumb terminals', () => {
@@ -21,19 +21,22 @@ describe('terminal fallbacks', () => {
   });
   it('renders the full brand and verified channels at standard widths', () => {
     const banner = brandBanner(80, true);
-    expect(banner.sideBySide).toBe(true);
-    expect(banner.wordmark).toContain('P A T H  /  SECURITY LEARNING EXPERIENCE');
+    expect(banner.wordmark.join('\n')).toContain('██████╗');
+    expect(banner.product).toBe('P A T H  /  SECURITY LEARNING EXPERIENCE');
     expect(banner.details.join('\n')).toContain('github.com/codegurex');
     expect(banner.details.join('\n')).toContain('linkedin.com/in/codegurex');
-    expect(combineColumns(banner.logo, banner.wordmark).every(line => line.length <= 80)).toBe(true);
-    expect(largeWord('CODEGUREX', false)).toHaveLength(5);
+    expect(centerLines(banner.wordmark, 80).every(line => line.length <= 80)).toBe(true);
   });
   it('uses an unboxed compact identity in narrow terminals', () => {
-    for (const width of [1, 20, 40, 57]) {
+    for (const width of [1, 20, 40]) {
       const banner = brandBanner(width, false);
-      expect(banner.sideBySide).toBe(false);
-      expect(banner.wordmark).toEqual(['CODEGUREX PATH']);
+      expect(banner.wordmark).toEqual(['CODEGUREX']);
+      expect(banner.product).toContain('P A T H');
       expect(banner.details.join('\n')).toContain('codegurex.com');
     }
+  });
+  it('selects readable ASCII wordmarks for medium terminal widths', () => {
+    expect(brandBanner(46, false).wordmark[0]).toContain('___');
+    expect(brandBanner(57, false).wordmark[0]).toContain('____');
   });
 });

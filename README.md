@@ -68,9 +68,8 @@ The tests include built executable smoke checks, so run build before `npm test`.
 ## Installation and npm/npx readiness
 
 The package exposes `codegurex-path` through the npm `bin` field. Build output has a
-Node shebang, and `prepack` rebuilds the executable. The package is **not published**
-as part of this implementation; availability and ownership of the registry name must
-be checked by the maintainer before a release.
+Node shebang, and `prepack` rebuilds the executable. Registry publication is a
+deliberate maintainer action performed only after the release checks pass.
 
 Test the local package without a global installation:
 
@@ -79,7 +78,7 @@ npm pack
 npm exec --package=./codegurex-path-0.1.0.tgz -- codegurex-path --help
 ```
 
-After a maintainer publishes the verified package, the intended usage is:
+After publication, the intended usage is:
 
 ```sh
 npx codegurex-path

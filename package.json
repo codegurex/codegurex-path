@@ -18,6 +18,17 @@
   "keywords": ["cli", "education", "cybersecurity", "offline", "codegurex"],
   "author": "CodeGurex Security",
   "license": "MIT",
+  "homepage": "https://github.com/codegurex/codegurex-path#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codegurex/codegurex-path.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codegurex/codegurex-path/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@inquirer/prompts": "8.7.1",
     "chalk": "6.0.0",

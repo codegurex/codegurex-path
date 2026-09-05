@@ -1,0 +1,32 @@
+{
+  "name": "codegurex-path",
+  "version": "0.1.0",
+  "description": "Learn how systems work. Then learn how to secure them.",
+  "type": "module",
+  "bin": { "codegurex-path": "dist/index.js" },
+  "files": ["dist", "README.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md"],
+  "engines": { "node": "^22.13.0 || >=24.0.0" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run build && npm test",
+    "prepack": "npm run build"
+  },
+  "keywords": ["cli", "education", "cybersecurity", "offline", "codegurex"],
+  "author": "CodeGurex Security",
+  "license": "MIT",
+  "dependencies": {
+    "@inquirer/prompts": "8.7.1",
+    "chalk": "6.0.0",
+    "commander": "15.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "5.9.3",
+    "vitest": "5.0.0"
+  }
+}

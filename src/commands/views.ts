@@ -25,7 +25,7 @@ export function progress({ ui, state }: Context): void {
 }
 export function about({ ui }: Context): void {
   ui.title('ABOUT CODEGUREX PATH');
-  ui.line('An open learning project by CodeGurex Security.\nHelp people understand how modern systems work before teaching them how to secure them.\nSecurity for the AI Era.\ncodegurex.com');
+  ui.line('An open learning project by CodeGurex Security.\nHelp people understand how modern systems work before teaching them how to secure them.\nSecurity for the AI Era.\n\nWeb: codegurex.com\nGitHub: github.com/codegurex\nLinkedIn: linkedin.com/in/codegurex');
   ui.section('OUR PHILOSOPHY', 'Learn how systems work before trying to break them.\nBuild before attacking.\nUnderstand the protocol, not only the tool.\nAutomate what you understand.\nPractice only in authorized environments.\nDocument everything.\nSecurity is engineering.');
 }
 export function practice(ctx: Context, lesson: Lesson): void {

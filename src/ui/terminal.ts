@@ -1,5 +1,6 @@
 import { Chalk } from 'chalk';
 import type { State } from '../types/progress.js';
+import { brandBanner, combineColumns } from './banner.js';
 
 export function capabilities(settings?: State['settings'], env = process.env, platform = process.platform, tty = Boolean(process.stdout.isTTY), columns = process.stdout.columns || 80) {
   const limited = !tty || env.TERM === 'dumb';
@@ -50,10 +51,11 @@ export class Terminal {
   }
   clear(): void { if (this.caps.tty && !this.caps.limited) process.stdout.write('\x1b[2J\x1b[H'); }
   banner(): void {
-    if (this.caps.width >= 60) this.code('+----------------------+\n|  C G  /  P A T H      |\n+----------------------+');
-    this.title('CODEGUREX PATH');
-    this.line('CodeGurex Security | Security for the AI Era');
-    this.line('Learn how systems work. Then learn how to secure them.');
+    const banner = brandBanner(this.caps.width, this.caps.unicode);
+    const header = banner.sideBySide ? combineColumns(banner.logo, banner.wordmark) : [...banner.logo, '', ...banner.wordmark];
+    console.log('\n' + header.map(line => this.colors.blue.bold(line)).join('\n'));
+    console.log('\n' + banner.details.map(line => this.colors.gray(line)).join('\n'));
+    this.line('\nLearn how systems work. Then learn how to secure them.');
     if (this.caps.width < 50) this.line('Compact view. Widen the terminal for easier reading.');
   }
 }

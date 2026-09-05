@@ -10,12 +10,23 @@ checks, module quizzes, safe exercises and local progress. No account, remote ba
 telemetry, browser UI or automatic execution of practice commands.
 
 ```text
-+----------------------+
-|  C G  /  P A T H      |
-+----------------------+
+    /########   ####  ####  ###  ####  ####  #  #  ###  ####  #  #
+  /##            #  #  #  #  #  #  #  #  #  #  #  #  #  #  #
+ ##              #  #  #  #  #  ###   # ##  #  #  ###  ###    ##
+ ##              #  #  #  #  #  #  #  #  #  #  # #  #  #  #
+ ##              ####  ####  ###  ####  ####  ####  #  #  ####  #  #
+  \##
+    \########   P A T H  /  SECURITY LEARNING EXPERIENCE
 
-CODEGUREX PATH
-------------------------------------------------------------
++------------------------------------------------------------------------------+
+| CODEGUREX SECURITY                                                           |
+| Security for the AI Era                                                      |
+|                                                                              |
+| WEB       codegurex.com                                                      |
+| GITHUB    github.com/codegurex                                               |
+| LINKEDIN  linkedin.com/in/codegurex                                          |
++------------------------------------------------------------------------------+
+
 Learn how systems work. Then learn how to secure them.
 
 Overall progress: 15% | XP: 60
@@ -33,8 +44,10 @@ Last lesson: logic
   Exit
 ```
 
-Illustrative terminal demo. Modern terminals use restrained blue accents; limited
-terminals use a numbered ASCII menu. No artificial loading delays.
+Illustrative terminal demo. The geometric C adapts the supplied company mark for a
+text-only environment. Modern terminals use restrained blue accents and Unicode;
+limited terminals use a compact identity and numbered ASCII menu. No artificial
+loading delays.
 
 ## Requirements and local development
 

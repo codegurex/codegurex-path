@@ -10,6 +10,7 @@ afterAll(() => { rmSync(dir, { recursive: true, force: true }); });
 const cli = (...args: string[]) => spawnSync(process.execPath, [resolve('dist/index.js'), ...args], {
   env: { ...process.env, CODEGUREX_PATH_HOME: dir, NO_COLOR: '1' }, encoding: 'utf8', timeout: 10000,
 });
+const packageVersion = (JSON.parse(readFileSync(resolve('package.json'), 'utf8')) as { version: string }).version;
 describe('built CLI smoke checks', () => {
   it('shows help, version and non-TTY startup without creating state', () => {
     for (const args of [[], ['--help'], ['--version']]) {
@@ -17,7 +18,7 @@ describe('built CLI smoke checks', () => {
       expect(result.status, result.stderr).toBe(0);
       expect(result.stdout).not.toContain('\x1b[');
     }
-    expect(cli('--version').stdout.trim()).toBe('0.1.0');
+    expect(cli('--version').stdout.trim()).toBe(packageVersion);
     expect(readdirSync(dir)).toEqual([]);
   });
   it('renders roadmap, lessons, practice, progress, settings and about offline', () => {

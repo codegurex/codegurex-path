@@ -1,11 +1,21 @@
 {
   "name": "codegurex-path",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Learn how systems work. Then learn how to secure them.",
   "type": "module",
-  "bin": { "codegurex-path": "dist/index.js" },
-  "files": ["dist", "README.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md"],
-  "engines": { "node": "^22.13.0 || >=24.0.0" },
+  "bin": {
+    "codegurex-path": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "dev": "tsx src/index.ts",
@@ -15,7 +25,13 @@
     "check": "npm run build && npm test",
     "prepack": "npm run build"
   },
-  "keywords": ["cli", "education", "cybersecurity", "offline", "codegurex"],
+  "keywords": [
+    "cli",
+    "education",
+    "cybersecurity",
+    "offline",
+    "codegurex"
+  ],
   "author": "CodeGurex Security",
   "license": "MIT",
   "homepage": "https://github.com/codegurex/codegurex-path#readme",
